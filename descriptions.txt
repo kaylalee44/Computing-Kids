@@ -1,0 +1,26 @@
+Inside Repo:
+--Files:
+-data_helpers.py - for the CNN
+-inference.ipynb - predicts the job roles of a data set
+-info_extract.py - for pulling different information from data sets
+-LabelSimplifier.py - for the CNN (labels)
+-merge_datasets.py - scratch file to merge data sets
+-merge_main_datasets.py - scratch file to merge data sets
+-multi_label_text_classification_cnn_ipynb - the CNN (trains on data and predicts job roles from job titles)
+-skills_bulletpoints.py - pulls the skills from jobs through data set input
+-skills_bulletpoints_test.py - test file for pulling the skills and bullet points from jobs (scratch file)
+-test.py - scratch file for testing
+
+-web_scraper.ipynb - scrapes data from Indeed and creates a data set, then gets the classified job roles, then pulls the skills and bullet points from each job (removes all duplicates and unknown values)
+--You don't need to edit any code, you can just run each cell and it should work as long as you have the dsci folder with all the files and mounted your drive correctly (when mounting your drive make sure that the account that your on is the one that you give access to so that it can find the dsci folder and files). Run all the cells that define functions, and then you have the option to run the cell that pulls all the information, the job roles, and skills individually if you'd like or if you already have a data set (as long as you change the file name that's read in)  
+
+-webscraping.py - early stage of web scraper
+-webscraping2.0.py - up to date web scraper that pulls all the fields from Indeed
+
+--Data:
+-most recent data sets of Indeed jobs
+
+--Data2:
+-older data sets of Indeed jobs
+
+-todo.txt - details of improvements to be made, issues, etc.

@@ -1,0 +1,52 @@
+Web scraper + job roles:
+---Issues:
+--Page issue where the page link being scraped has different job results than when you manually go on the same page link (causes duplicates and missed jobs)
+--Edge cases with the predicted job roles: UX/UI vs. UI/UX vs. UXUI vs. UIUX..., false negatives, spelling errors
+--getLocationCity and getLocationState edge case where the state that gets returned is a "," instead of "WA" and the city returned is only one part of the city (only returns "Moses" from "Moses Lake") because the location is "Moses Lake, WA 98837" or "Moses Lake, WA"
+--job roles section has difficulty with large data sets (not sure why but the job roles takes awhile when the input is a large data set even though it seems like it already got all the job roles)
+--TODO: might need to rerun the full time data set due to there being a lot of duplicates for some reason
+--Job role detection could be restrictive (could be ignoring a common job role i.e. the ones that show up as numbers vs. words)
+
+---Improvements:
+--Add to skills list
+--Add more key words for headers (good to have qualifications vs. required qualifications)
+--Add cmpID somehow (job map?)
+--Make it so that the web scraper creates a new data set every ~15000 jobs or so
+--Asynchronous method in python to call like 10 different pages at the same time
+
+---Things to check:
+--Check how long it takes to run for one bullet point (for like N number of skills in list)
+
+---Potential alternatives to pulling skills:
+--Use tfidf w/ 7k skills as feature (looks like he uses nmf, https://github.com/2dubs/Job-Skills-Extraction)
+
+<------------------------------------------------------------------>
+
+Info_extract.py:
+---TO DO:
+--Change salary units from yearly to hourly
+
+<------------------------------------------------------------------>
+
+Data Analysis (answer + visualizations):
+1. Which job roles are the most popular for entry level tech? (How many job listings are there for each)
+
+2. What are the mean & median salaries for each tech job role?
+--need to change units to hourly
+
+3. Which cities have the most total tech jobs?
+
+4. For each job role, what are the skills/technologies that are most requested by employers?
+-- Which ones are considered required, and which are considered not required but good to have?
+---need to separate out skills within every list in order to conduct data analysis
+
+5. Is there a difference in salary between entry-level tech jobs and entry-level non-tech jobs?
+--non technical jobs aren't shown
+
+
+<------------------------------------------------------------------>
+
+Researching:
+--CNN
+--word2vec
+--keras

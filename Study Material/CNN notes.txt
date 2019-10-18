@@ -1,0 +1,49 @@
+==VOCABULARY==
+-Convolutional Neural Network (CNNs) - several layers of 
+convolutions with nonlinear activation functions applied to the results
+-Natural Language Processing (NLP)
+-Convolution - multiply a matrix's values element-wise with the 
+original matrix, then sum them up. To get the full convolution, 
+do this for each element by sliding the filter over the whole matrix
+-Location Invariance - "Because you are sliding your filters over the 
+whole image you don’t really care where the elephant occurs."
+-(Local) Compositionality - "Each filter composes a local patch of 
+lower-level features into higher-level representation."
+-Token - word or character
+-Stride size - defining how much you want to shift your filter at
+each step
+-Channels - different "views" of your input data 
+
+==NOTES==
+-CNN automatically learns the values of its filters
+-A larger stride size leads to fewer applications of the filter and a smaller output size.
+-Convolutions and pooling operations lose information about the 
+local order of words
+-Compile defines the loss function, the optimizer and the metrics.
+You need a compiled model to train (because training uses the loss 
+function and the optimizer). But it's not necessary to compile a 
+model for predicting.
+-A summary is a text output that is generated from one or more 
+texts that conveys relevant information from the original text in 
+a shorter form. The goal of automatic text summarization is to 
+transform the source text into a shorter version using semantics.
+-keras.evaluate() is for evaluating your trained model.
+-Structure of a neural network. A neural network is a simplified 
+model of the way the human brain processes information. It works 
+by simulating a large number of interconnected processing units 
+that resemble abstract versions of neurons. The processing units 
+are arranged in layers.
+-one epoch = one forward pass and one backward pass of all the 
+training examples. 
+-batch size = the number of training examples in one 
+forward/backward pass.
+-A recursive neural network is a kind of deep neural network 
+created by applying the same set of weights recursively over a 
+structured input, to produce a structured prediction over 
+variable-size input structures, or a scalar prediction on it, by 
+traversing a given structure in topological order.
+
+==QUESTIONS==
+--What are neurons?
+--What are layers? / What are the different types of layers?
+
